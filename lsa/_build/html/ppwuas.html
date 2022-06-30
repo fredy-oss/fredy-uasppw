@@ -1,0 +1,1394 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Crawling &#8212; My sample book</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to your Jupyter Book" href="intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">My sample book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Crawling
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/ppwuas.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fppwuas.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/ppwuas.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Crawling</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="crawling">
+<h1>Crawling<a class="headerlink" href="#crawling" title="Permalink to this headline">#</a></h1>
+<p>Data crawling adalah program yang menghubungkan halaman web, kemudian mengunduh kontennya. Program crawling dalam data science hanya akan online untuk mencari dua hal, yaitu data yang dicari oleh pengguna dan penjelajahan target dengan jangkauan yang lebih luas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># data visualisation and manipulation</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">style</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="c1">#configure</span>
+<span class="c1"># sets matplotlib to inline and displays graphs below the corressponding cell.</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline  
+<span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;fivethirtyeight&#39;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s1">&#39;whitegrid&#39;</span><span class="p">,</span><span class="n">color_codes</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1">#import nltk</span>
+<span class="kn">import</span> <span class="nn">nltk</span>
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
+<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">word_tokenize</span><span class="p">,</span><span class="n">sent_tokenize</span>
+
+<span class="c1">#preprocessing</span>
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>  <span class="c1">#stopwords</span>
+<span class="kn">from</span> <span class="nn">nltk</span> <span class="kn">import</span> <span class="n">word_tokenize</span><span class="p">,</span><span class="n">sent_tokenize</span> <span class="c1"># tokenizing</span>
+<span class="kn">from</span> <span class="nn">nltk.stem</span> <span class="kn">import</span> <span class="n">PorterStemmer</span><span class="p">,</span><span class="n">LancasterStemmer</span>  <span class="c1"># using the Porter Stemmer and Lancaster Stemmer and others</span>
+<span class="kn">from</span> <span class="nn">nltk.stem.snowball</span> <span class="kn">import</span> <span class="n">SnowballStemmer</span>
+<span class="kn">from</span> <span class="nn">nltk.stem</span> <span class="kn">import</span> <span class="n">WordNetLemmatizer</span>  <span class="c1"># lammatizer from WordNet</span>
+
+<span class="c1"># for named entity recognition (NER)</span>
+<span class="kn">from</span> <span class="nn">nltk</span> <span class="kn">import</span> <span class="n">ne_chunk</span>
+
+<span class="c1"># vectorizers for creating the document-term-matrix (DTM)</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span><span class="p">,</span><span class="n">CountVectorizer</span>
+
+<span class="c1">#stop-words</span>
+<span class="n">stop_words</span><span class="o">=</span><span class="nb">set</span><span class="p">(</span><span class="n">nltk</span><span class="o">.</span><span class="n">corpus</span><span class="o">.</span><span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;english&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./hasilmanajemen.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="nn">Input In [2],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./hasilmanajemen.csv&#39;</span><span class="p">)</span>
+
+<span class="nn">File c:\users\asus\appdata\local\programs\python\python39\lib\site-packages\pandas\util\_decorators.py:311,</span> in <span class="ni">deprecate_nonkeyword_arguments.&lt;locals&gt;.decorate.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">305</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">num_allow_args</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">306</span>     <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">307</span>         <span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">arguments</span><span class="o">=</span><span class="n">arguments</span><span class="p">),</span>
+<span class="g g-Whitespace">    </span><span class="mi">308</span>         <span class="ne">FutureWarning</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">309</span>         <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">310</span>     <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">311</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File c:\users\asus\appdata\local\programs\python\python39\lib\site-packages\pandas\io\parsers\readers.py:680,</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">665</span> <span class="n">kwds_defaults</span> <span class="o">=</span> <span class="n">_refine_defaults_read</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">666</span>     <span class="n">dialect</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">667</span>     <span class="n">delimiter</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">676</span>     <span class="n">defaults</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;delimiter&quot;</span><span class="p">:</span> <span class="s2">&quot;,&quot;</span><span class="p">},</span>
+<span class="g g-Whitespace">    </span><span class="mi">677</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">678</span> <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">680</span> <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
+
+<span class="nn">File c:\users\asus\appdata\local\programs\python\python39\lib\site-packages\pandas\io\parsers\readers.py:575,</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">572</span> <span class="n">_validate_names</span><span class="p">(</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;names&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">574</span> <span class="c1"># Create the parser.</span>
+<span class="ne">--&gt; </span><span class="mi">575</span> <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">577</span> <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">578</span>     <span class="k">return</span> <span class="n">parser</span>
+
+<span class="nn">File c:\users\asus\appdata\local\programs\python\python39\lib\site-packages\pandas\io\parsers\readers.py:933,</span> in <span class="ni">TextFileReader.__init__</span><span class="nt">(self, f, engine, **kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">930</span>     <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">932</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="p">:</span> <span class="n">IOHandles</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="ne">--&gt; </span><span class="mi">933</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
+
+<span class="nn">File c:\users\asus\appdata\local\programs\python\python39\lib\site-packages\pandas\io\parsers\readers.py:1217,</span> in <span class="ni">TextFileReader._make_engine</span><span class="nt">(self, f, engine)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1213</span>     <span class="n">mode</span> <span class="o">=</span> <span class="s2">&quot;rb&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1214</span> <span class="c1"># error: No overload variant of &quot;get_handle&quot; matches argument types</span>
+<span class="g g-Whitespace">   </span><span class="mi">1215</span> <span class="c1"># &quot;Union[str, PathLike[str], ReadCsvBuffer[bytes], ReadCsvBuffer[str]]&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1216</span> <span class="c1"># , &quot;str&quot;, &quot;bool&quot;, &quot;Any&quot;, &quot;Any&quot;, &quot;Any&quot;, &quot;Any&quot;, &quot;Any&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1217</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="o">=</span> <span class="n">get_handle</span><span class="p">(</span>  <span class="c1"># type: ignore[call-overload]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1218</span>     <span class="n">f</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1219</span>     <span class="n">mode</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1220</span>     <span class="n">encoding</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1221</span>     <span class="n">compression</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;compression&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1222</span>     <span class="n">memory_map</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;memory_map&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1223</span>     <span class="n">is_text</span><span class="o">=</span><span class="n">is_text</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1224</span>     <span class="n">errors</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding_errors&quot;</span><span class="p">,</span> <span class="s2">&quot;strict&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1225</span>     <span class="n">storage_options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;storage_options&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1226</span> <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1227</span> <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+<span class="g g-Whitespace">   </span><span class="mi">1228</span> <span class="n">f</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="o">.</span><span class="n">handle</span>
+
+<span class="nn">File c:\users\asus\appdata\local\programs\python\python39\lib\site-packages\pandas\io\common.py:789,</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">784</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">785</span>     <span class="c1"># Check whether the filename is to be opened in binary mode.</span>
+<span class="g g-Whitespace">    </span><span class="mi">786</span>     <span class="c1"># Binary mode does not support &#39;encoding&#39; and &#39;newline&#39;.</span>
+<span class="g g-Whitespace">    </span><span class="mi">787</span>     <span class="k">if</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span> <span class="ow">and</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">788</span>         <span class="c1"># Encoding</span>
+<span class="ne">--&gt; </span><span class="mi">789</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">790</span>             <span class="n">handle</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">791</span>             <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">792</span>             <span class="n">encoding</span><span class="o">=</span><span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">793</span>             <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">794</span>             <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">795</span>         <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">796</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">797</span>         <span class="c1"># Binary mode</span>
+<span class="g g-Whitespace">    </span><span class="mi">798</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;./hasilmanajemen.csv&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>judul</th>
+      <th>penulis</th>
+      <th>dosen_1</th>
+      <th>dosen_2</th>
+      <th>abstrak</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Pengembangan Sumber Daya Manusia Dalam Rangka ...</td>
+      <td>Penulis : Ismie Novitasari Soekarno</td>
+      <td>Dosen Pembimbing I : Dra. Hj. S. Anugrahini Ir...</td>
+      <td>Dosen Pembimbing II :Faidal. S.E, MM</td>
+      <td>ABSTRAK\r\nPenelitian ini bertujuan untuk mene...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>PENGARUH RELATIONSHIP MARKETING TERHADAP LOYAL...</td>
+      <td>Penulis : ARYA SUBAYU</td>
+      <td>Dosen Pembimbing I : Dr.H.Pribanus Wantara.,Dr...</td>
+      <td>Dosen Pembimbing II :Hadi Purnomo, SE, MM</td>
+      <td>Tujuan penelitian ini adalah untuk mengetahui ...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Analisis Kinerja Keuangan Perusahaan yang terd...</td>
+      <td>Penulis : DIANA AGUSTINI DEWI</td>
+      <td>Dosen Pembimbing I : Drs.BAMBANG SUDARSONO.,MM</td>
+      <td>Dosen Pembimbing II :PURNAMAWATI,.SE,MSi</td>
+      <td>Diana Agustini Dewi, 2013. “Analisis Kinerja K...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>PENGARUH STRUKTUR MODAL DAN LIKUIDITAS TERHADA...</td>
+      <td>Penulis : AHMAD ZAINI ALI</td>
+      <td>Dosen Pembimbing I : R. GATOT HERU PRANJOTO, S...</td>
+      <td>Dosen Pembimbing II :PURNAMAWATI, SE., MSi</td>
+      <td>Pendekatan penelitian yang digunakan dalam pen...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>PENGARUH SELF EFFICACY TERHADAP PRESTASI AKADE...</td>
+      <td>Penulis : ISTIB SYAROH</td>
+      <td>Dosen Pembimbing I : Dr. Dra. Hj. Iriani Ismai...</td>
+      <td>Dosen Pembimbing II :Drs. Ec. Mudji Kuswinarno...</td>
+      <td>Tujuan dari penelitian ini adalah untuk menget...</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>PENGARUH FAKTOR-FAKTOR STRES KERJA TERHADAP DI...</td>
+      <td>Penulis : Saiful Rahman</td>
+      <td>Dosen Pembimbing I : Dr. Muhammad Alkirom Wild...</td>
+      <td>Dosen Pembimbing II :Helmi Buyung Aulia,S.ST.,...</td>
+      <td>ABSTRAK\r\n\r\nPenelitian ini bertujuan untuk ...</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Pengaruh Budaya Terhadap Perilaku Pengemis Ana...</td>
+      <td>Penulis : Indah Permata Sari</td>
+      <td>Dosen Pembimbing I : Dr. Hj. Iriani Ismail., D...</td>
+      <td>Dosen Pembimbing II :Faidal,SE., MM</td>
+      <td>Munculnya asumsi bahwa lahirnya budaya mengemi...</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Pengaruh Rekrutmen Dan Pengembangan Karir Terh...</td>
+      <td>Penulis : Zainal Abidin</td>
+      <td>Dosen Pembimbing I : Dr. Iriani Ismail,Dra.,MM</td>
+      <td>Dosen Pembimbing II :Helmi Buyung Aulia,SE.,ST...</td>
+      <td>Penelitian ini bertujuan untuk mengetahui peng...</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>ANALISIS PORTOFOLIO YANG OPTIMAL DI BEI DENGAN...</td>
+      <td>Penulis : Mira Dwiastuti</td>
+      <td>Dosen Pembimbing I : Hj Evaliati Amaniyah, S.E...</td>
+      <td>Dosen Pembimbing II :Echsan Gani, S.E, M.Si</td>
+      <td>Suatu keputusan investasi selalu berhubungan d...</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>PENGARUH IKLAN ONLINE MELALUI MEDIA FACEBOOK T...</td>
+      <td>Penulis : Hening Ari Putra</td>
+      <td>Dosen Pembimbing I : Bambang Setyo Pambudi</td>
+      <td>Dosen Pembimbing II :Suyono</td>
+      <td>Abstrak\r\n\r\nHening Ary Putra, Pengaruh Ikla...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;judul&#39;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;penulis&#39;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;dosen_1&#39;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;dosen_2&#39;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>abstrak</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>ABSTRAK\r\nPenelitian ini bertujuan untuk mene...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Tujuan penelitian ini adalah untuk mengetahui ...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Diana Agustini Dewi, 2013. “Analisis Kinerja K...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Pendekatan penelitian yang digunakan dalam pen...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Tujuan dari penelitian ini adalah untuk menget...</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>ABSTRAK\r\n\r\nPenelitian ini bertujuan untuk ...</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Munculnya asumsi bahwa lahirnya budaya mengemi...</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Penelitian ini bertujuan untuk mengetahui peng...</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Suatu keputusan investasi selalu berhubungan d...</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Abstrak\r\n\r\nHening Ary Putra, Pengaruh Ikla...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vect</span> <span class="o">=</span><span class="n">TfidfVectorizer</span><span class="p">(</span><span class="n">stop_words</span><span class="o">=</span><span class="n">stop_words</span><span class="p">,</span><span class="n">max_features</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span> <span class="c1"># to play with. min_df,max_df,max_features etc...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vect_text</span><span class="o">=</span><span class="n">vect</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;abstrak&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;U&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">vect_text</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="c1">#print(vect_text)</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">vect_text</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">vect_text</span><span class="o">.</span><span class="n">toarray</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">idf</span><span class="o">=</span><span class="n">vect</span><span class="o">.</span><span class="n">idf_</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(100, 1000)
+         0    1         2         3    4         5        6    7         8    \
+0   0.087101  0.0  0.079784  0.159569  0.0  0.000000  0.00000  0.0  0.000000   
+1   0.000000  0.0  0.000000  0.000000  0.0  0.000000  0.00000  0.0  0.000000   
+2   0.000000  0.0  0.000000  0.000000  0.0  0.000000  0.00000  0.0  0.000000   
+3   0.000000  0.0  0.000000  0.000000  0.0  0.000000  0.00000  0.0  0.046109   
+4   0.000000  0.0  0.000000  0.000000  0.0  0.000000  0.00000  0.0  0.000000   
+..       ...  ...       ...       ...  ...       ...      ...  ...       ...   
+95  0.000000  0.0  0.000000  0.071306  0.0  0.000000  0.00000  0.0  0.000000   
+96  0.000000  0.0  0.000000  0.000000  0.0  0.000000  0.00000  0.0  0.000000   
+97  0.000000  0.0  0.064440  0.000000  0.0  0.000000  0.07932  0.0  0.000000   
+98  0.000000  0.0  0.081642  0.000000  0.0  0.000000  0.00000  0.0  0.000000   
+99  0.000000  0.0  0.000000  0.000000  0.0  0.048771  0.00000  0.0  0.000000   
+
+         9    ...  990  991  992  993       994       995  996       997  998  \
+0   0.000000  ...  0.0  0.0  0.0  0.0  0.000000  0.000000  0.0  0.089600  0.0   
+1   0.000000  ...  0.0  0.0  0.0  0.0  0.000000  0.000000  0.0  0.071729  0.0   
+2   0.000000  ...  0.0  0.0  0.0  0.0  0.000000  0.000000  0.0  0.126823  0.0   
+3   0.000000  ...  0.0  0.0  0.0  0.0  0.000000  0.000000  0.0  0.104596  0.0   
+4   0.071575  ...  0.0  0.0  0.0  0.0  0.000000  0.000000  0.0  0.104616  0.0   
+..       ...  ...  ...  ...  ...  ...       ...       ...  ...       ...  ...   
+95  0.000000  ...  0.0  0.0  0.0  0.0  0.035145  0.164362  0.0  0.180176  0.0   
+96  0.000000  ...  0.0  0.0  0.0  0.0  0.000000  0.000000  0.0  0.117435  0.0   
+97  0.000000  ...  0.0  0.0  0.0  0.0  0.000000  0.000000  0.0  0.090459  0.0   
+98  0.000000  ...  0.0  0.0  0.0  0.0  0.080478  0.000000  0.0  0.114607  0.0   
+99  0.000000  ...  0.0  0.0  0.0  0.0  0.000000  0.000000  0.0  0.112883  0.0   
+
+         999  
+0   0.000000  
+1   0.000000  
+2   0.000000  
+3   0.000000  
+4   0.000000  
+..       ...  
+95  0.000000  
+96  0.000000  
+97  0.000000  
+98  0.000000  
+99  0.051488  
+
+[100 rows x 1000 columns]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">idf</span><span class="o">=</span><span class="n">vect</span><span class="o">.</span><span class="n">idf_</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dd</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">vect</span><span class="o">.</span><span class="n">get_feature_names</span><span class="p">(),</span> <span class="n">idf</span><span class="p">))</span>
+<span class="n">l</span><span class="o">=</span><span class="nb">sorted</span><span class="p">(</span><span class="n">dd</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="p">(</span><span class="n">dd</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">)</span>
+<span class="c1"># print(l)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">l</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dd</span><span class="p">[</span><span class="s1">&#39;dan&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dd</span><span class="p">[</span><span class="s1">&#39;yamaha&#39;</span><span class="p">])</span>  <span class="c1"># police is most common and forecast is least common among the news headlines.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dan yamaha
+1.0200006667066694
+4.921973336281314
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\users\asus\appdata\local\programs\python\python39\lib\site-packages\sklearn\utils\deprecation.py:87: FutureWarning: Function get_feature_names is deprecated; get_feature_names is deprecated in 1.0 and will be removed in 1.2. Please use get_feature_names_out instead.
+  warnings.warn(msg, category=FutureWarning)
+</pre></div>
+</div>
+</div>
+</div>
+<h1>LSA</h1><p>Latent Semantic Analysis (LSA) merupakan sebuah metode yang memanfaatkan model statistik matematis untuk menganalisa struktur semantik suatu teks. LSA bisa digunakan untuk menilai esai dengan mengkonversikan esai menjadi matriks-matriks yang diberi nilai pada masing-masing term untuk dicari kesamaan dengan term referensi.</p><h1>Algoritma LSA</h1><p>Tahapan-tahapan algoritma LSA dalam prosessing teks</p><h1>Menghitung Term-document Matrix</h1> <p>Document Term Matrix merupakan algoritma – Metode perhitungan yang sering kita temui dalam text minning.</p><p>Melalui Document Term Matrix, kita dapat melakukan analisis yang lebih menarik. Mudah untuk menentukan jumlah kata individual untuk setiap dokumen atau untuk semua dokumen. Misalkan untuk menghitung agregat dan statistik dasar seperti jumlah istilah rata-rata, mean, median, mode, varians, dan deviasi standar dari panjang dokumen, serta dapat mengetahui istilah mana yang lebih sering dalam kumpulan dokumen dan dapat menggunakan informasi tersebut untuk menentukan istilah mana yang lebih mungkin “mewakili” dokumen tersebut.</p><h1>Singular Value Decomposition</h1><p>Singular Value Decomposition adalah seuatu teknik untuk mendekomposisi matriks berukuran apa saja (biasanya diaplikasikan untuk matriks dengan ukuran sangat besar), untuk mempermudah pengolahan data. Hasil dari SVD ini adalah singular value yang disimpan dalam sebuah matriks diagonal, D,  dalam urutan yang sesuai dengan koresponding singular vector-ya.</p><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">TruncatedSVD</span>
+<span class="n">lsa_model</span> <span class="o">=</span> <span class="n">TruncatedSVD</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">algorithm</span><span class="o">=</span><span class="s1">&#39;randomized&#39;</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="n">lsa_top</span><span class="o">=</span><span class="n">lsa_model</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">vect_text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">lsa_top</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lsa_top</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>  <span class="c1"># (no_of_doc*no_of_topics)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 3.72417772e-01  2.59282405e-01 -5.97275294e-02  4.79216460e-02
+  -6.78031341e-02 -1.42669594e-01  6.04199907e-02 -9.94604695e-03
+  -3.50384426e-01  2.17987579e-03]
+ [ 2.59850250e-01  1.51177073e-02 -3.37760495e-02  1.72728208e-01
+  -1.10159067e-01 -2.21663118e-01 -6.32616610e-02  5.22082296e-02
+  -2.37810984e-01  3.82511860e-02]
+ [ 2.34394468e-01  1.57873300e-01  4.44924517e-01 -2.61600376e-03
+   5.84453178e-02  8.72361435e-02  5.73672222e-02  8.43275048e-02
+   1.23987988e-01  2.88152869e-01]
+ [ 3.08517923e-01  1.16419068e-01  3.88600007e-01  1.14718494e-02
+   8.66462126e-02  4.66737044e-02 -5.74621761e-02  4.91242874e-01
+   6.09109712e-02  6.71574461e-02]
+ [ 2.41293948e-01  7.32547319e-02 -3.95243015e-02  3.37306790e-02
+  -2.06339843e-02 -7.33312290e-03  4.00114645e-02  1.89492869e-02
+   2.26360769e-01  2.96473780e-03]
+ [ 1.93847853e-01  2.15169001e-01 -1.50102549e-01 -4.40032350e-02
+   3.34163929e-02  3.64030094e-02 -7.69389576e-02 -1.01675599e-02
+   2.38468332e-01  4.19853849e-02]
+ [ 2.19657619e-01  6.66790444e-02  4.92186290e-02  4.69731778e-02
+  -2.46467338e-03  4.43789977e-02  6.14912104e-02 -1.12487259e-01
+   4.03643300e-02  1.52194277e-02]
+ [ 2.68036627e-01  2.29557676e-01 -9.21666616e-02  4.65608528e-02
+   1.01799540e-01 -5.60125971e-02  2.54868221e-01 -4.55311724e-02
+  -3.01118843e-02  2.02181330e-02]
+ [ 1.94132029e-01  1.81890869e-01  3.42345243e-01 -2.10888145e-03
+  -7.15385553e-02 -6.13043171e-02 -1.44929795e-01 -3.61757479e-01
+  -2.74884567e-01 -2.94858437e-02]
+ [ 2.92538282e-01 -1.05828039e-01 -2.53738387e-02  2.54913812e-02
+   1.22891437e-01  1.42701692e-03  4.61177437e-02 -3.64423926e-02
+   2.07541330e-01  1.18075696e-01]
+ [ 3.01015554e-01 -8.50812180e-02 -6.56104078e-02  5.57458564e-02
+   6.98301268e-01 -1.60763752e-01 -2.22430087e-01 -7.86208095e-02
+   5.71008005e-02 -1.74397114e-02]
+ [ 4.60368394e-01 -1.83211631e-01 -4.31808605e-02  2.21609620e-01
+  -2.66730329e-02  3.24416571e-01  1.97558885e-03  2.65960279e-02
+  -9.65429330e-02  2.83237915e-02]
+ [ 3.00247149e-01  7.40593019e-02  3.55922375e-01 -7.71621012e-03
+   3.50342649e-02  4.96517467e-02 -5.46023333e-02  4.67678638e-01
+  -1.24583415e-02  1.71569539e-02]
+ [ 3.63891007e-01 -2.36204935e-01 -7.10283999e-02  6.22968659e-02
+  -1.37660355e-01  1.55029145e-01 -1.63220037e-03 -9.48069574e-02
+   8.59345371e-02 -1.17284851e-01]
+ [ 3.67147963e-01 -2.99308415e-02 -2.56106495e-02  6.31931948e-02
+   5.67528565e-02 -9.41264383e-02  2.84972085e-02  3.37968337e-02
+   4.07968476e-03 -6.61472696e-02]
+ [ 2.96950251e-01 -2.83978941e-02 -1.72657429e-02  1.95696974e-01
+  -9.82792330e-02 -1.50767807e-01 -1.64865037e-01 -3.98395657e-02
+   2.23933100e-01 -1.71064894e-01]
+ [ 3.09765206e-01  2.30593551e-02 -7.50017928e-03  1.32086440e-01
+   3.32952277e-01 -3.24423266e-02  1.00617745e-01 -2.44715223e-02
+   1.26880114e-01  3.41000897e-02]
+ [ 4.66794009e-01 -2.28716543e-01 -2.51542366e-02 -1.54621071e-01
+  -8.82536304e-02 -4.62985648e-02 -4.28669530e-02 -3.48046179e-02
+   4.91716346e-02  4.47180606e-02]
+ [ 2.35321540e-01  8.68775640e-02  3.35446997e-02  6.60025298e-02
+   1.26656856e-02 -4.30045616e-02  1.53323992e-01 -6.67157400e-03
+   6.72615221e-02  5.35977733e-03]
+ [ 4.05496979e-01 -2.62208545e-01 -8.34264634e-02  1.22614542e-01
+   3.72261851e-02  3.54638302e-01  4.45077829e-03 -8.18889795e-02
+  -1.10959165e-01 -5.61472622e-02]
+ [ 2.46464395e-01  1.89302252e-01 -7.09995095e-03  1.52883159e-01
+   1.06307197e-01 -1.40181100e-01  5.17382316e-01  3.85201159e-02
+  -1.79403385e-01 -6.46010860e-02]
+ [ 3.01541725e-01  4.33889870e-01 -3.08967482e-01 -2.75065306e-01
+  -6.73471459e-02  1.01846104e-01 -1.58955889e-01  5.17723593e-02
+   3.41451830e-02  4.50239405e-02]
+ [ 2.36384668e-01  2.30047842e-01 -1.95840698e-01 -1.01567295e-01
+   1.09097940e-02  1.28142767e-02 -4.73268557e-02  1.33233510e-01
+  -7.44411733e-03 -1.61458024e-01]
+ [ 4.31949573e-01 -2.10914193e-02 -7.21063396e-02  3.17558713e-01
+  -1.14806573e-01 -1.78628704e-01 -1.25401177e-01  5.66951873e-02
+   1.45498165e-01 -3.12312748e-01]
+ [ 1.53498824e-01  1.32846741e-01  2.29629506e-01  7.30663053e-02
+  -1.29739592e-02 -3.10378347e-02 -2.51369477e-02  1.87461980e-02
+  -5.95397950e-02  2.95466560e-01]
+ [ 5.68145333e-01 -3.20430946e-01 -7.48022409e-02 -3.06932404e-01
+  -2.54786205e-02 -2.31184257e-01 -2.07114019e-02 -1.81253995e-02
+   2.25172816e-02  1.27574017e-01]
+ [ 3.87395940e-02  8.07728427e-03  2.02011195e-02  3.97247425e-02
+   1.35600818e-02 -2.53028867e-02  1.13338714e-02  5.63512779e-02
+   2.38172266e-03 -7.46283541e-02]
+ [ 2.19165137e-01  1.36206883e-01  3.69236238e-01 -2.55298688e-02
+   4.60898538e-02  8.98540642e-02  1.81105314e-02  3.55862871e-02
+   6.87205870e-02  1.33828994e-01]
+ [ 2.44345025e-01  1.09258260e-01  4.75562318e-01 -1.57861469e-01
+  -2.52370799e-02  5.23110377e-02 -6.96291185e-02 -4.39248408e-01
+   4.54631099e-02 -2.03135874e-01]
+ [ 2.47799921e-01 -6.40162265e-02 -6.46664039e-03  2.28613074e-02
+   7.28595170e-03 -3.58026976e-02  2.16686621e-02 -1.69653502e-03
+  -3.54795650e-02  2.80904578e-02]
+ [ 4.44136112e-01 -2.14935367e-01 -6.03753516e-02  1.65753869e-02
+   1.30631565e-01  7.90976701e-02 -4.56925692e-02  6.65905454e-03
+  -7.61364784e-02  5.51920007e-02]
+ [ 3.19948011e-01  3.09602711e-02 -1.47962390e-02  1.59752866e-01
+  -7.47847062e-02 -1.04529491e-01  2.68676961e-02  8.63158888e-02
+   3.57058126e-02 -2.69993204e-01]
+ [ 4.76147105e-01 -2.06562004e-01 -1.13514380e-02 -7.74346008e-02
+  -1.54139713e-01 -6.38346891e-02  1.09047562e-02  4.92770463e-02
+   6.78519744e-02 -1.09433006e-01]
+ [ 1.71939189e-01  1.13859523e-02  1.15685224e-02  2.10309450e-01
+  -1.17463753e-01  9.73635246e-02 -2.07048950e-02 -1.11918514e-01
+   2.24256005e-01 -2.28367812e-01]
+ [ 3.05223207e-01 -1.29179438e-02  3.93967323e-03  2.31537697e-02
+  -5.52938028e-02 -4.13913771e-02  1.02609046e-01 -7.75514219e-02
+   3.38747406e-01  1.43003830e-01]
+ [ 1.68395594e-01  6.55074476e-02  9.51422627e-02 -4.21386087e-02
+   1.33995508e-02  1.19532585e-02  1.45470766e-01 -1.18298596e-01
+   8.35125955e-02  1.86461407e-01]
+ [ 2.36256433e-01  1.90229068e-02  1.05225528e-01  2.42775197e-02
+  -9.18619753e-02 -4.78539347e-03  3.15526084e-02 -7.55677990e-02
+   1.70985213e-01 -1.06820055e-04]
+ [ 5.20933968e-01 -1.71237600e-01  2.09442396e-02 -1.13522049e-01
+  -7.13005926e-02 -9.65883897e-02  3.35097012e-02  9.25113365e-02
+  -6.19939631e-02 -1.50187705e-01]
+ [ 3.78738916e-01  3.68314422e-01 -2.15609737e-01 -9.37066684e-02
+  -2.83655232e-02  1.02975944e-01 -4.36403015e-02  4.57806320e-02
+   2.49400074e-02  6.32526252e-02]
+ [ 4.17555827e-01 -7.83369273e-02 -2.96332187e-02  2.85113116e-01
+  -1.71560729e-01  9.72060482e-02 -8.83166039e-02 -5.30989258e-02
+   2.01432915e-01 -1.47541645e-01]
+ [ 2.36669416e-01 -1.44027325e-02  5.29881053e-03  1.73653868e-01
+  -2.41194124e-02 -1.34050735e-02 -2.78330616e-02  3.49315779e-02
+   3.03424718e-02 -3.86403402e-02]
+ [ 2.07147663e-01  1.32255334e-01  4.83185549e-01 -1.38016457e-01
+  -1.01561221e-02  8.03398151e-02 -9.84260102e-02 -3.99749407e-01
+   2.58559244e-02 -1.94233561e-01]
+ [ 1.76377637e-01  8.36711637e-02  6.68421261e-02  1.14188607e-01
+  -2.53027941e-02  1.07094193e-02 -1.68250758e-02 -8.15670855e-02
+   3.43644895e-02  3.61971563e-01]
+ [ 3.24628723e-01 -1.85801898e-01 -4.42842430e-02 -2.62314225e-02
+   1.99220036e-03  6.96154619e-02 -7.06696019e-03 -3.11108052e-02
+  -5.06151805e-02  8.28863736e-02]
+ [ 4.86212356e-01 -1.53633566e-01 -1.09098229e-02 -1.39427866e-01
+  -2.04446625e-03 -1.36472477e-01  6.33926027e-02  3.57908601e-02
+  -1.10351138e-01 -1.76866262e-02]
+ [ 4.37292040e-01 -2.86558114e-01 -8.72842487e-02  4.60110642e-02
+   3.38047592e-02  2.67868105e-01 -2.66378351e-02 -3.73884289e-02
+  -8.71521076e-02  1.17235183e-02]
+ [ 5.50142493e-01 -2.56874881e-01 -6.92599968e-02 -2.35432528e-02
+  -5.92082987e-02  4.08077400e-02  4.55951970e-02  1.40868092e-02
+  -7.17140687e-02 -5.19549771e-02]
+ [ 3.56859083e-01  2.13440304e-01 -1.14012791e-01  3.91448803e-02
+   3.58231604e-01 -1.48229428e-01 -1.23966678e-01 -1.87811971e-02
+  -9.20441747e-02 -9.16810387e-02]
+ [ 4.63539384e-01 -2.79856942e-01 -7.02846753e-02 -2.78354984e-01
+  -7.35681250e-02 -1.94824700e-01  4.21089901e-02  2.65068661e-02
+   1.58298868e-02  3.11752913e-02]
+ [ 2.22119857e-01 -4.94618849e-02 -4.14562425e-02  1.00874322e-01
+   6.72585233e-01 -1.17286040e-01 -2.05906243e-01 -5.99728230e-02
+   3.88558838e-02 -5.75296947e-02]
+ [ 6.19413380e-01 -2.14685312e-01  9.51726307e-03 -3.12737015e-02
+  -1.34012663e-01 -4.21138222e-02 -1.60858233e-03  5.33932292e-02
+   2.13876102e-02 -1.24547105e-01]
+ [ 4.94366547e-01 -2.63382486e-01 -9.08008681e-02  1.75171081e-01
+   2.08954193e-02  4.40053166e-01  1.60803511e-02 -5.36268942e-03
+  -1.11827368e-01  1.41984266e-01]
+ [ 4.36424530e-01 -1.75721502e-01 -3.00208843e-02  1.24362311e-02
+  -1.87673589e-02  2.18082585e-01 -7.27245814e-02 -3.66015974e-02
+  -3.03954040e-02  1.34068473e-01]
+ [ 2.43501786e-01  5.11582921e-02  1.24741689e-02  4.14181578e-02
+  -7.59391885e-03 -1.88074722e-02  8.77217202e-02  5.60466254e-02
+  -3.36592309e-02 -6.84268613e-02]
+ [ 5.20289939e-01 -3.28136820e-01 -4.69980450e-02 -3.37768348e-01
+  -1.05178636e-01 -2.49796883e-01 -9.35457324e-03 -8.14895666e-03
+  -3.41785980e-02  4.30434407e-02]
+ [ 3.30286283e-01  3.33454351e-01 -1.59601062e-01 -6.08487553e-02
+   1.30701998e-02  1.69307137e-02 -5.57327617e-02 -3.06680641e-02
+  -8.93198834e-02 -5.30817261e-02]
+ [ 2.14706106e-01 -2.75829891e-02  2.48835595e-02  1.65229024e-01
+   1.85193140e-02  1.50024390e-01 -1.15542409e-02 -2.44654672e-02
+  -1.69661144e-02  5.35999657e-02]
+ [ 0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00]
+ [ 2.08711489e-01  7.49165945e-02  2.17335167e-03  1.71712677e-01
+  -8.31616602e-02 -3.09613621e-02  1.99136497e-02 -9.32230316e-02
+   3.54752608e-01  5.15660658e-03]
+ [ 5.04124948e-01 -2.60164703e-01 -6.47437274e-02  1.62912407e-02
+  -5.83066226e-03  1.94978943e-01  3.23723290e-02 -7.29551850e-03
+   1.47744128e-02  2.67020599e-02]
+ [ 4.39097071e-01  1.80476375e-01 -2.18313205e-02  1.30101141e-01
+   6.30371367e-02 -1.83622306e-01  4.14064194e-01  9.88214982e-02
+  -1.91102005e-01 -2.07365452e-01]
+ [ 3.87208556e-01  9.07053209e-02  5.66869849e-04  4.47256271e-01
+  -2.41031042e-01 -3.01234789e-01 -2.56244763e-01 -4.54575665e-02
+   2.30362578e-02  4.74843479e-03]
+ [ 4.50184795e-01 -1.62405935e-01  1.77490003e-02  7.50852904e-02
+   1.98260896e-02  2.42341772e-01  6.28952692e-02  4.77849590e-02
+  -1.16403300e-01 -4.84592432e-02]
+ [ 4.06086010e-01  8.60618911e-02  5.16568669e-01 -1.08227126e-01
+  -7.58193491e-03  3.41997392e-02 -1.10783398e-01  3.13625886e-01
+   1.46466567e-02 -1.97393321e-01]
+ [ 3.67054687e-01  1.01661834e-01  5.39900864e-01 -1.21853475e-01
+  -1.38030162e-02  4.98921119e-02 -1.14180606e-01  1.89606698e-01
+   1.76050697e-02 -1.76950902e-01]
+ [ 4.48760738e-01 -2.49501282e-01 -7.44293871e-02  1.82362264e-01
+   3.91284095e-02  4.11167221e-01 -2.14427360e-02 -6.23860986e-02
+  -9.02860300e-02 -4.88328044e-02]
+ [ 3.20019310e-01 -1.68841399e-01 -3.01390641e-02  8.11037599e-02
+   6.12123102e-02  2.80404242e-01  5.49725025e-03 -9.75518361e-03
+  -1.75394494e-01  5.24987862e-02]
+ [ 3.44677272e-01  4.34182844e-01 -2.88880636e-01 -3.30585284e-02
+  -1.30265620e-01  6.29193480e-02 -2.75582391e-01  4.30924242e-02
+   1.36385175e-01 -3.27183068e-02]
+ [ 3.03557132e-01  5.86863974e-02 -4.58630602e-02  3.04944640e-01
+  -1.50237811e-01 -2.74490718e-01 -1.46716014e-01  9.67496746e-03
+  -5.55630727e-02  1.71551054e-01]
+ [ 3.31625222e-01  5.80918013e-02 -8.92290662e-03  3.91945096e-01
+  -1.68873251e-01 -2.39171091e-01 -1.41275418e-01  7.41841978e-03
+  -8.36188291e-02  2.64346999e-01]
+ [ 2.12774837e-01  2.35467756e-01 -1.56966038e-01 -1.30820040e-01
+   1.10553905e-02  9.69044983e-02 -1.38915194e-01  3.61359474e-02
+   1.24971246e-01 -7.23606352e-02]
+ [ 1.38478822e-01  8.66648117e-02  1.81100893e-01  5.32538782e-02
+   1.94642849e-02  1.03839559e-02  6.68196789e-02 -3.10711915e-02
+   6.51899001e-02  3.28906334e-01]
+ [ 3.01224086e-01 -1.14537947e-01 -6.79308044e-02  2.43220556e-02
+   6.94982304e-01 -1.43550732e-01 -2.03771086e-01 -8.21338966e-02
+   3.97827968e-02 -2.61310283e-02]
+ [ 2.99540536e-01 -1.57923383e-01 -4.41962694e-02 -4.57178686e-02
+   4.47445593e-02  7.71246905e-02  2.10905785e-02  2.45039532e-02
+  -1.27249465e-02  8.88958625e-02]
+ [ 6.18459644e-01 -2.87203843e-01 -4.48078187e-02 -2.69381589e-01
+  -9.42805855e-02 -1.98828760e-01  2.46298941e-02  4.45379913e-02
+  -8.37263993e-02 -2.82452619e-02]
+ [ 2.14671562e-01  6.40440558e-02  9.81112896e-03  1.14104454e-01
+  -1.04351600e-01 -9.01890400e-02 -1.50175567e-02 -3.15963381e-02
+  -8.09650597e-02 -6.21396750e-02]
+ [ 4.28551230e-01 -2.49672644e-01 -6.01449476e-02 -1.86043591e-01
+   1.99501073e-02 -1.53754684e-01 -1.00433199e-02 -1.03595145e-02
+  -8.68373855e-02  2.14716336e-02]
+ [ 5.12058572e-01 -2.06595313e-01 -2.68835930e-02 -2.52323768e-01
+  -5.81873088e-02 -1.28761411e-01  1.28164558e-02 -7.09740173e-02
+   7.44986538e-02  1.09207299e-01]
+ [ 3.09865647e-01  3.87439216e-01 -2.25553989e-01 -1.67144201e-01
+  -2.24433159e-02  1.54856003e-01 -1.49312932e-01  7.64921127e-02
+   1.33678027e-01 -7.83648440e-03]
+ [ 3.38849509e-01  3.62561425e-01 -8.40546919e-02 -1.07465442e-01
+  -1.36943940e-02  8.10686138e-02  1.10165227e-02 -1.35251140e-02
+   5.19786374e-02 -2.67589542e-02]
+ [ 1.90808440e-01  2.27104993e-02  7.09045713e-02  1.21967315e-02
+  -4.01085843e-02 -1.58508806e-02  4.72755605e-02 -8.91041978e-02
+   1.13292111e-01  1.89992401e-02]
+ [ 2.68246925e-01  2.38084475e-01  1.57143434e-01 -5.88350509e-02
+   2.75984501e-02  1.66180943e-02  2.20249670e-01 -2.74589922e-01
+   1.57812651e-02 -1.63062873e-01]
+ [ 3.77785249e-01  2.88225113e-01 -1.83411119e-01  1.06259191e-02
+   2.40808112e-02  1.45500877e-01  5.02803161e-02  8.91215676e-04
+   5.65563602e-02  1.45702337e-01]
+ [ 3.07785673e-01  4.48584856e-01 -2.21559118e-01 -2.11204879e-01
+  -4.76230017e-02  1.00054138e-01 -2.49512674e-01  2.00645432e-02
+  -2.15657483e-01  5.43914651e-02]
+ [ 2.72987133e-01  3.37983905e-01 -9.85153342e-02 -9.43579814e-02
+   1.60848159e-02  7.00626291e-03 -1.59679934e-02 -8.67241029e-02
+  -1.85652039e-01  3.21901686e-02]
+ [ 2.49428428e-01  6.46861235e-02 -5.42434457e-02  3.99144952e-01
+  -9.72926430e-02 -2.41251507e-01 -2.11506393e-01 -2.96145582e-03
+  -8.56339841e-02  2.79048189e-01]
+ [ 3.32141718e-01  3.81077833e-01 -1.75833922e-01 -4.36112799e-02
+  -1.78594576e-02  9.69232722e-02  1.76313534e-01 -6.12710136e-02
+   2.57634896e-01  7.44516760e-02]
+ [ 3.35178243e-01  3.41286333e-01 -1.68631304e-01 -7.44316693e-02
+   3.10892694e-02  3.87457112e-02  6.91721683e-02  2.98224437e-02
+   1.23354010e-01 -1.02086522e-01]
+ [ 3.08086251e-01  2.57260245e-01 -5.94425485e-02 -7.74369192e-03
+  -3.88655348e-02  2.22970407e-03  1.87727945e-01 -6.71455880e-02
+  -4.82982754e-02  8.52595217e-03]
+ [ 1.59608641e-01  1.28423770e-01  2.51620406e-01  3.36025055e-02
+  -1.77529557e-02 -7.77471916e-03 -2.07836971e-02 -5.24766180e-02
+  -9.73617997e-02  1.67148297e-01]
+ [ 3.38778302e-01  3.96199724e-01 -2.10736057e-01 -1.53953929e-01
+  -6.08766676e-02  5.15803000e-02 -1.93685388e-01  3.06574880e-02
+  -3.15973408e-01  6.77270305e-03]
+ [ 2.60089436e-01  1.64521104e-01  4.06755065e-01 -1.22755191e-02
+  -2.19019186e-02 -9.14095169e-03 -1.46742828e-01 -3.21801489e-01
+  -1.57026997e-01  4.65019515e-02]
+ [ 3.18683216e-01  7.92389693e-02  4.15500652e-02  5.33393067e-02
+   6.57135803e-02  3.43875186e-02  2.28077732e-01  1.30466871e-03
+   1.05352472e-01  4.46417775e-02]
+ [ 2.64562636e-01  1.20531658e-01  4.34296557e-01 -1.84594957e-02
+   7.39498041e-02  7.17936200e-02 -8.55811132e-02  4.99373814e-01
+   5.12382780e-02  2.69562995e-02]
+ [ 1.69301480e-01 -6.86266151e-03  1.74804410e-02 -5.42683097e-02
+   1.86001248e-02 -6.27635889e-02  5.15732540e-02 -9.19039478e-02
+   1.88615777e-01  1.62772470e-01]
+ [ 3.50665158e-01  3.02918075e-01 -7.63621619e-03  1.65544604e-02
+   5.84991993e-02  2.24006790e-02  3.11293751e-01 -8.31217658e-02
+  -1.11692985e-02  6.33177692e-02]
+ [ 5.01729491e-01 -2.66262386e-01 -5.36973056e-02 -3.10183371e-01
+  -8.12602902e-02 -2.13143621e-01  6.53453818e-02 -4.05609765e-02
+   1.70095923e-01  1.67400107e-01]
+ [ 2.41155282e-01 -3.23756710e-03 -3.23266308e-02  1.82648376e-01
+  -8.97179198e-03 -7.31447041e-03  8.03095430e-03  2.61558829e-02
+  -4.40133551e-02 -2.06415002e-01]
+ [ 3.69658166e-01  2.05844771e-01  9.17718204e-02  1.22546227e-01
+   1.18210018e-01 -1.00311261e-01  5.13742318e-01  2.87999040e-02
+  -5.98462807e-02 -3.09424860e-02]
+ [ 2.50464797e-01  1.07172572e-01  4.10834906e-01 -8.31363739e-02
+  -2.43788756e-02  1.60226979e-02 -1.48006869e-01 -2.55760493e-01
+  -5.37986771e-02 -1.51586795e-02]]
+(100, 10)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">l</span><span class="o">=</span><span class="n">lsa_top</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Document 0 :&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">topic</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Topic &quot;</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="s2">&quot; : &quot;</span><span class="p">,</span><span class="n">topic</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Document 0 :
+Topic  0  :  37.24177715376966
+Topic  1  :  25.92824049491094
+Topic  2  :  -5.972752939542046
+Topic  3  :  4.792164599199658
+Topic  4  :  -6.780313405220315
+Topic  5  :  -14.266959446025924
+Topic  6  :  6.04199907035581
+Topic  7  :  -0.9946046949736325
+Topic  8  :  -35.03844259212522
+Topic  9  :  0.21798757905645583
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">lsa_model</span><span class="o">.</span><span class="n">components_</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="c1"># (no_of_topics*no_of_words)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lsa_model</span><span class="o">.</span><span class="n">components_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(10, 1000)
+[[ 1.10130123e-02  2.65631595e-03  1.01877906e-02 ...  2.64877570e-01
+   5.32269567e-03  2.95633424e-03]
+ [ 1.94744176e-02  7.33837354e-03  1.82721517e-02 ...  6.69685163e-02
+  -5.37271839e-03  4.82549370e-03]
+ [ 3.09189231e-02 -8.08863754e-03 -5.28046545e-03 ...  8.46363072e-02
+  -9.74394305e-04  1.73142093e-02]
+ ...
+ [-4.79940895e-02  9.57572864e-03  3.44920593e-03 ... -4.38722120e-02
+  -3.55899397e-05 -2.01516769e-02]
+ [-4.51453745e-02 -5.17854254e-04 -2.70715518e-02 ...  4.15941714e-02
+   3.94495663e-03 -9.82777809e-03]
+ [ 4.53136496e-03 -1.31942143e-02 -1.55033109e-02 ... -9.65912964e-03
+   2.80841858e-03  3.79303307e-03]]
+</pre></div>
+</div>
+</div>
+</div>
+<h1>Mengekstrak Topik dan Term</h1><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># most important words for each topic</span>
+<span class="n">vocab</span> <span class="o">=</span> <span class="n">vect</span><span class="o">.</span><span class="n">get_feature_names</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">comp</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">lsa_model</span><span class="o">.</span><span class="n">components_</span><span class="p">):</span>
+    <span class="n">vocab_comp</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">vocab</span><span class="p">,</span> <span class="n">comp</span><span class="p">)</span>
+    <span class="n">sorted_words</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">vocab_comp</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)[:</span><span class="mi">10</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Topic &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;: &quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">sorted_words</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Topic 0: 
+yang dan variabel keputusan pembelian terhadap penelitian produk uji kerja 
+
+Topic 1: 
+kerja karyawan kinerja produktivitas prestasi pegawai pt perusahaan sebesar keselamatan 
+
+Topic 2: 
+saham perusahaan return ratio asset portofolio tahun terdaftar equity 2011 
+
+Topic 3: 
+nasabah kepuasan bank merek loyalitas bangkalan nilai kualitas cabang pelanggan 
+
+Topic 4: 
+pesan iklan isi televisi format struktur langsung konsumen pantene sumber 
+
+Topic 5: 
+merek kerja brand asosiasi honda motor vario ekuitas image sepeda 
+
+Topic 6: 
+kompensasi kinerja karyawan finansial langsung kepemimpinan fhitung nonfinansial rekrutmen kompetensi 
+
+Topic 7: 
+ratio asset current equity debt variabel uji signifikan roe firm 
+
+Topic 8: 
+kepuasan kualitas akademik madura universitas trunojoyo online mahasiswa pelayanan faktor 
+
+Topic 9: 
+tahun bank nasabah cabang piutang loyalitas rasio sidogiri bangkalan keuangan 
+</pre></div>
+</div>
+</div>
+</div>
+<h1>K-Means</h1><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">pandas</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pandas in c:\users\asus\appdata\local\programs\python\python39\lib\site-packages (1.4.2)
+Requirement already satisfied: pytz&gt;=2020.1 in c:\users\asus\appdata\local\programs\python\python39\lib\site-packages (from pandas) (2022.1)
+Requirement already satisfied: python-dateutil&gt;=2.8.1 in c:\users\asus\appdata\local\programs\python\python39\lib\site-packages (from pandas) (2.8.2)
+Requirement already satisfied: numpy&gt;=1.18.5; platform_machine != &quot;aarch64&quot; and platform_machine != &quot;arm64&quot; and python_version &lt; &quot;3.10&quot; in c:\users\asus\appdata\local\programs\python\python39\lib\site-packages (from pandas) (1.22.3)
+Requirement already satisfied: six&gt;=1.5 in c:\users\asus\appdata\roaming\python\python39\site-packages (from python-dateutil&gt;=2.8.1-&gt;pandas) (1.15.0)
+Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: You are using pip version 20.2.3; however, version 22.1.2 is available.
+You should consider upgrading via the &#39;c:\users\asus\appdata\local\programs\python\python39\python.exe -m pip install --upgrade pip&#39; command.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="c1">#Import Library untuk Tokenisasi</span>
+<span class="kn">import</span> <span class="nn">string</span> 
+<span class="kn">import</span> <span class="nn">re</span> <span class="c1">#regex library</span>
+
+<span class="c1"># import word_tokenize &amp; FreqDist dari NLTK</span>
+<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">word_tokenize</span> 
+<span class="kn">from</span> <span class="nn">nltk.probability</span> <span class="kn">import</span> <span class="n">FreqDist</span>
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">CountVectorizer</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span>
+<span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">adjusted_rand_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_blobs</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">davies_bouldin_score</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">true_k</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span> <span class="n">true_k</span><span class="p">,</span> <span class="n">init</span><span class="o">=</span><span class="s1">&#39;k-means++&#39;</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">vect_text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>#sk-container-id-1 {color: black;background-color: white;}#sk-container-id-1 pre{padding: 0;}#sk-container-id-1 div.sk-toggleable {background-color: white;}#sk-container-id-1 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-1 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-1 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-1 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-1 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-1 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-1 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-1 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-1 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-1 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-1 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-1 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-1 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-1 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-1 div.sk-item {position: relative;z-index: 1;}#sk-container-id-1 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-1 div.sk-item::before, #sk-container-id-1 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-1 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-1 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-1 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-1 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-1 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-1 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-1 div.sk-label-container {text-align: center;}#sk-container-id-1 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-1 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>KMeans(max_iter=100, n_clusters=4, n_init=1)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" checked><label for="sk-estimator-id-1" class="sk-toggleable__label sk-toggleable__label-arrow">KMeans</label><div class="sk-toggleable__content"><pre>KMeans(max_iter=100, n_clusters=4, n_init=1)</pre></div></div></div></div></div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;kata teratas per cluster:&quot;</span><span class="p">)</span>
+<span class="n">order_centroids</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">cluster_centers_</span><span class="o">.</span><span class="n">argsort</span><span class="p">()[:,</span> <span class="p">::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">terms</span> <span class="o">=</span> <span class="n">vect</span><span class="o">.</span><span class="n">get_feature_names</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;cluster </span><span class="si">%d</span><span class="s2">:&quot;</span> <span class="o">%</span> <span class="n">i</span><span class="p">),</span>
+    <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="n">order_centroids</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:</span><span class="mi">10</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39; </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">terms</span><span class="p">[</span><span class="n">ind</span><span class="p">]),</span>
+    <span class="nb">print</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>kata teratas per cluster:
+cluster 0:
+ kerja
+ karyawan
+ dan
+ yang
+ produktivitas
+ kinerja
+ pt
+ prestasi
+ variabel
+ terhadap
+cluster 1:
+ yang
+ dan
+ variabel
+ keputusan
+ pembelian
+ produk
+ terhadap
+ uji
+ penelitian
+ merek
+cluster 2:
+ tahun
+ yang
+ dan
+ online
+ akademik
+ faktor
+ pada
+ kinerja
+ kompetensi
+ universitas
+cluster 3:
+ pesan
+ langsung
+ isi
+ iklan
+ yang
+ pengaruh
+ konsumen
+ terhadap
+ dan
+ tom
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\users\asus\appdata\local\programs\python\python39\lib\site-packages\sklearn\utils\deprecation.py:87: FutureWarning: Function get_feature_names is deprecated; get_feature_names is deprecated in 1.0 and will be removed in 1.2. Please use get_feature_names_out instead.
+  warnings.warn(msg, category=FutureWarning)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;Prediksi&quot;</span> <span class="p">)</span>
+
+<span class="n">Y</span> <span class="o">=</span> <span class="n">vect</span><span class="o">.</span><span class="n">transform</span><span class="p">([</span> <span class="s2">&quot;mengetahui media pemasaran&quot;</span> <span class="p">])</span> 
+<span class="n">prediksi</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">prediksi</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Prediksi
+[2]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">order_centroids</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[422 385 179 ... 410 766 322]
+ [997 179 970 ... 629 428 267]
+ [901 997 179 ... 362 691 999]
+ [719 473 358 ... 868 869 999]]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Welcome to your Jupyter Book</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By The Jupyter Book Community<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
